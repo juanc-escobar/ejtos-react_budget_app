@@ -70,6 +70,23 @@ export const AppReducer = (state, action) => {
             return {
                 ...state
             }
+        
+            case 'INCREMENT_BUDGET':
+                return {
+                    ...state,
+                    budget: state.budget + 10
+                };
+            case 'DECREMENT_BUDGET':
+                return {
+                    ...state,
+                    budget: state.budget - 10
+                };
+
+            case 'SET_CURRENCY':
+                return {
+                    ...state,
+                    currency: action.payload,
+                };
 
         default:
             return state;
